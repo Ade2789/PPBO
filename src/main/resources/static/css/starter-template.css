@@ -1,0 +1,53 @@
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.example_b {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #60a3bc;
+font-size:10px;
+border-radius: 60px;
+display: inline-block;
+border: none;
+padding:5px;
+transition: all 0.4s ease 0s;
+}
+.example_b:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 20px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
+.example_del {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+font-size:10px;
+background: #FA5858;
+border-radius: 60px;
+padding:5px;
+display: inline-block;
+border: none;
+transition: all 0.5s ease 0s;
+}
+.example_del:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 20px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+.h20{
+	padding-bottom:20px;
+}
+.h22{
+	padding-top:30px;
+}
+.conBg{
+	background:#F8F8FF;
+}
+.conBg2{
+	background:#F5FFFA;
+}

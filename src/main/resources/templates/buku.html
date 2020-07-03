@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico"/>
+
+    <title>Books</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/starter-template.css}"/>
+</head>
+<body>
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/buku">Home</a></li>
+                    <li><a href="/buku/addBooks">New</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+    <!-- Main component for a primary marketing message or call to action -->
+    <H1>Management Books System</H1>
+    <div class="jumbotron">
+        <h3 th:text="'DAFTAR BUKU IF.' "></h3>
+        
+        <div th:if="${not #lists.isEmpty(buku)}">
+        	<table class="table">
+			  <thead class="thead-light">
+			    <tr>
+			      <th scope="col">JUDUL</th>
+			      <th scope="col">PENERBIT</th>
+			      <th scope="col">PENULIS</th>
+			      <th scope="col">TAHUN</th>
+			      <th scope="col">HARGA</th>
+			      <th scope="col">ACTION</th>
+			      
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr th:each="buku1 : ${buku}">
+			    	<td th:text="${buku1.judul}"></td>
+			    	<td th:text="${buku1.penerbit}"></td>
+			    	<td th:text="${buku1.penulis}"></td>
+			    	<td th:text="${buku1.tahun}"></td>
+			    	<td th:text="${buku1.harga}"></td>
+			    	<td>
+			    		<a th:href="${'/buku/edit/'+buku1.id}" class="example_b" href="add-website-here" >edit</a>
+			      		<a th:href="${'/buku/delete/'+buku1.id}" class="example_del" href="add-website-here"  rel="nofollow noopener">delete</a>
+					</td>
+			    </tr>
+			  </tbody>
+			</table>
+        </div>
+        
+       
+    </div>
+</div> <!-- /container -->
+<!-- Bootstrap core JavaScript================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../static/js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+</body>
+</html>
